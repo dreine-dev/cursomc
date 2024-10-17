@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+import org.springframework.web.bind.annotation.RestController;
 
 import com.dreinedev.cursomc.domain.Categoria;
 import com.dreinedev.cursomc.domain.Cidade;
@@ -23,6 +23,7 @@ import com.dreinedev.cursomc.repositories.EnderecoRepository;
 import com.dreinedev.cursomc.repositories.EstadoRepository;
 import com.dreinedev.cursomc.repositories.ProdutoRepository;
 
+@RestController
 @SpringBootApplication
 public class CursomcApplication implements CommandLineRunner{
 
