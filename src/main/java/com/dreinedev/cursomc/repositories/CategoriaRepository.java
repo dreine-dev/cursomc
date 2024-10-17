@@ -8,4 +8,6 @@ import com.dreinedev.cursomc.domain.Categoria;
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
 
+
+
 }
