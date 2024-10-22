@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import com.dreinedev.cursomc.domain.enums.EstadoPagamento;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -21,14 +23,16 @@ public abstract class Pagamento implements Serializable {
 	@Id
 	private Integer id;
 	private Integer estado;
-	
+
+	@JsonBackReference
+	@JsonIgnore
 	@OneToOne
-	@JoinColumn(name="pedido_id")
+	@JoinColumn(name = "pedido_id")
 	@MapsId
 	private Pedido pedido;
-	
+
 	public Pagamento() {
-		
+
 	}
 
 	public Pagamento(Integer id, EstadoPagamento estado, Pedido pedido) {
@@ -78,7 +82,5 @@ public abstract class Pagamento implements Serializable {
 		Pagamento other = (Pagamento) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
-	
+
 }

@@ -2,8 +2,8 @@ package com.dreinedev.cursomc.domain.enums;
 
 public enum EstadoPagamento {
 
-	PENDENTE(1, "Pendente"),
-	QUITADO(2, "Quitado"),
+	PENDENTE(1, "Pendente"), 
+	QUITADO(2, "Quitado"), 
 	CANCELADO(3, "Cancelado");
 
 	private int cod;
@@ -26,8 +26,8 @@ public enum EstadoPagamento {
 		if (cod == null) {
 			return null;
 		}
-		for(EstadoPagamento x : EstadoPagamento.values()) {
-			if(cod.equals(x.getCod())) {
+		for (EstadoPagamento x : EstadoPagamento.values()) {
+			if (cod.equals(x.getCod())) {
 				return x;
 			}
 		}
